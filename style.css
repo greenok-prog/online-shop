@@ -58,6 +58,15 @@ header{
     width: 15px;
     height: auto;
 }
+.logo_section{
+    width: 28%;
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .catalog{
     padding: 0.7rem 1.5rem;
     background-color: #0d6efd;
@@ -75,18 +84,20 @@ header{
 
 .search{
     position: relative;
-
-    width: 35%;
+    display: block;
+    width: 33%;
 }
 .search_field{
     border: 0.5px solid rgb(222, 222, 222);
-    padding: 0.7rem 1rem;
+    padding: 0.9rem 1rem;
+    padding-right: 55px;
+    width: 100%;
 }
 .search svg{
     cursor: pointer;
     position: absolute;
-    top: 0.5rem;
-    right: 2rem;
+    top: 0.8rem;
+    right: 1rem;
 }
 .search svg:hover{
     fill: var(--text-color);
@@ -95,8 +106,11 @@ header{
 .search_field::placeholder{
     color: rgb(162, 160, 160);
 }
-.menu li a:hover{
-    color: var(--text-color);
+.menu_section{
+    width: 35%;
+}
+.menu li a:hover p{
+    color: var(--primary)
 }
 .menu-link img, .menu-link svg{
     max-width: 32px;
@@ -568,37 +582,28 @@ footer{
         
     }
 }
-@media (max-width:1050px){
-    .logo_section{
-        width: 50%;
-    }
-    .container-fluid{
-        padding: 0 15px;
-    }
-    .wrap{
-        padding: 0 15px;
-    }
 
-    .header_inner{
-        padding: 0 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .search{
-        width: 50%;
-        margin: 0;
-    }
-    .search input{
+@media (max-width:1050px){
+    
+    
+    .menu_section{
+        margin-top: 20px;
         width: 100%;
+        
     }
     .menu{
-        margin: 0;
-        margin-right: -10px;
-        padding: 0;
-        width: 100%;
-
+        display: flex;
+        justify-content: space-between;
     }
+    .search{
+        width: 49%;
+    }
+    .logo_section{
+        width: 49%;
+    }
+
+    
+ 
     .card{
         width: 23%;
     }
@@ -642,10 +647,7 @@ footer{
     .menu li a{
         font-size: 14px;
     }
-    .logo_section, .search, .menu{
-        margin: 0;
-        padding: 0;
-    }
+    
     .pre_header{
         display: none;
     }
@@ -667,17 +669,14 @@ footer{
     }
     .container-fluid{
         
-        margin: 0;
+        width: 95%;
     }
     header{
-        padding: 0;
+        
         width: 100%;
         box-shadow: none;
     }
-    .header_inner{
-        width: 100%;
-        /* padding: 0 2px; */
-    }
+    
     .menu{
         margin-top: 10px
     }

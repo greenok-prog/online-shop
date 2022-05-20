@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*,p,h1{
+*,p,h1,h2,h3,h4,h5{
     margin: 0;
     padding: 0;
     font-family: 'Jost', sans-serif;
@@ -31,9 +31,7 @@ li{
 header{
     box-shadow: 0 2px 6px -2px rgb(112, 112, 112);
 }
-.container-fluid{
-    padding: 0 3rem;
-}
+
 .pre_header{
     background-color: var(--gray-color);
     font-weight: 500;
@@ -42,6 +40,12 @@ header{
 
 .btn{
     border-radius: 0px;
+}
+.container-fluid{
+    padding: 0;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 /* bootstrap-end */
 .pre_header__phone{
@@ -227,6 +231,7 @@ header{
 /* footer */
 footer{
     background-color: var(--gray-color);
+    
 }
 .footer_list ul{
     margin-top: 5px;
@@ -399,6 +404,119 @@ footer{
 .products_filter-filter{
     width: 26%; 
 }
+
+/* cart */
+.cart{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+
+}
+.cart_items{
+    width: 65%;
+}
+.cart_total{
+    width: 28%;
+}
+.cart_item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-height: 300px;
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 3px solid rgb(242,242,242);
+    padding-bottom: 20px;
+}
+.cart_item:first-child{
+    margin-top: 0;
+}
+.cart_item:last-child{
+    border-bottom: none;
+}
+.cart_item-info{
+    width: 75%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-right: 50px;
+}
+.cart_item-info .cart_item-image{
+    width: 40%;
+}
+.cart_item-info h4{
+    width: 80%;
+    
+}
+.cart_item-body{
+    margin-left: 40px;
+    
+}
+.cart_item-actions{
+    margin-top: 10px;
+}
+.cart_item-actions span{
+    color: var(--primary);
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+.cart_item .cart_item-image img{
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: 230px;
+    object-fit: contain;
+
+}
+.cart_item-price{
+    width: 20%;
+    display: flex;
+    align-items: end;
+    
+    flex-direction: column;
+}
+.cart_item-count{
+    align-items: center;
+    padding: 3px;
+    margin-top: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+}
+.cart_item-count div{
+    font-size: 20px;
+    font-weight: 500;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+.cart_item-count span{
+    font-size: 18px;
+
+}
+.cart_total{
+    margin-left: 40px;
+    background-color: rgb(245, 245, 245);
+}
+.cart_total-price{
+    padding: 24px 24px;
+}
+.cart_total-price h4{
+    margin-bottom: 20px;
+}
+.cart_total-price h3{
+    margin-top: 40px;
+
+}
+
 @media (max-width: 900px){
     .card{
         width: 24%;
@@ -424,6 +542,30 @@ footer{
 
         margin-top: 20px;
         width: 100%;
+    }
+    .cart_item{
+        flex-direction: column;
+    }
+    .cart_item-info{
+        width: 100%;
+    }
+    .cart_item-title{
+        font-size: 20px;
+    }
+    .cart_item-price{
+        width: 100%;
+        flex-direction: row;
+        
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .cart_item-sum{
+        margin-bottom: 0!important ;
+    }
+    .cart_item-count{
+        margin: 0;
+        
     }
 }
 @media (max-width:1050px){
@@ -487,9 +629,12 @@ footer{
     .stock_list img{
         width: 100%;
     }
-    
+    .cart_item-image{
+        width: 40%;
+        max-height: 300px;
+    }
 }
-@media (max-width:650px) {
+@media (max-width:670px) {
     .menu{
         width: 100%;
         margin: 0 auto;
@@ -587,5 +732,17 @@ footer{
     }
     .login_wrap form{
         width: 90%;
+    }
+    .cart_section{
+        margin: 0 auto;
+        
+    }
+    .cart_items{
+        width: 100%;
+    }
+    .cart_total{
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
     }
 }

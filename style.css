@@ -112,6 +112,24 @@ header{
 .menu li a:hover p{
     color: var(--primary)
 }
+.menu-link{
+    position: relative;
+}
+.count{
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary);
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    padding-top: 3px;
+}
 .menu-link img, .menu-link svg{
     max-width: 32px;
     max-height: 32px;
@@ -164,8 +182,9 @@ header{
     background: var(--primary);
 }
 .owl-next span, .owl-prev span{
-    font-size: 22px;
-    display: flex;
+   padding-bottom: 5px;
+    font-size: 26px;
+    
     justify-content: center;
     align-items: center;
 }
@@ -561,6 +580,49 @@ footer{
 .owl-carousel{
     display: block;
 }
+.client_account{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+.left_sidebar{
+    width: 15%;
+}
+.left_sidebar ul li a{
+    color: var(--primary);
+    text-decoration: underline;
+}
+.left_sidebar ul li{
+    margin-bottom: 10px;
+}
+.left_sidebar ul li a:hover{
+    text-decoration: none;
+}
+.client_section{
+    width: 83%;
+}
+.client_section .table{
+    min-width: 100%;
+}
+.orders_list{
+    padding: 15px;
+    border: 1px solid rgb(245, 245, 245);
+}
+
+.orders_list .table tr th{
+    font-weight: 400;
+    color: var(--text-gray);
+
+}
+.orders_list .table tr td a{
+    text-decoration: underline;
+    color: var(--primary);
+}
+.table{
+    
+}
+
 
 
 @media (max-width: 900px){
@@ -612,6 +674,29 @@ footer{
     .cart_item-count{
         margin: 0;
         
+    }
+    .left_sidebar{
+        width: 100%;
+    }
+    .left_sidebar ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .orders_list{
+        width: 100%;
+        padding: 0;
+    }
+    .orders_list table{
+        width: 100%;
+    }
+    .orders_section{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .res{
+        display: none;
     }
 }
 

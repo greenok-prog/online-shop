@@ -301,7 +301,7 @@ footer{
 .my_modal{
     display: none;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -452,6 +452,8 @@ footer{
     flex-wrap: wrap;
 }
 .products_filter-items .card{
+    
+    width: 15rem;
     margin-bottom: 40px;
 }
 .products_filter-filter{
@@ -579,6 +581,7 @@ footer{
 }
 .owl-carousel{
     display: block;
+    z-index: 1;
 }
 .client_account{
     display: flex;
@@ -756,8 +759,14 @@ footer{
         max-height: 300px;
     }
 }
+
+
 @media (max-width:670px) {
-    
+   
+    .products_filter-items .card{
+        width: 13rem;
+
+    }
     .favorite_list .card{
         width: 17rem;
         margin-right: 6px;
@@ -869,5 +878,13 @@ footer{
     }
     .favorite_list{
         justify-content: center;
+    }
+}
+@media (max-width:465px) {
+    .products_filter-list{
+        justify-content: center;
+    }
+    .products_filter-list .card{
+        width: 17rem;
     }
 }
